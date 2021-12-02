@@ -11,7 +11,8 @@ class Musician extends Model {
 Musician.init({
     name: DataTypes.STRING,
     instrument: DataTypes.STRING,
-    albums: DataTypes.INTEGER
+    albums: DataTypes.INTEGER,
+    isVocalist: DataTypes.BOOLEAN,
 }, {
     sequelize, //specifies what database our model is stored in
     timestamps: false
