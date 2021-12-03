@@ -1,21 +1,13 @@
-//models go here
-
 const {sequelize, DataTypes, Model} = require('./db')
+//import models
+const { Musician } = require('./Musician')
+const { Band } = require('./Band')
 
-//create model for musicians in our database
-class Musician extends Model {
-    //add query methods here
-}
+//associate models
+//adds foreign key to musician table connecting a musician instance to a specific band
+Musician.belongsTo(Band)
+//gives us sequelize methods for a one to many relationship
+Band.hasMany(Musician)
 
-//create attributes for model using init method
-Musician.init({
-    name: DataTypes.STRING,
-    instrument: DataTypes.STRING,
-    albums: DataTypes.INTEGER,
-    isVocalist: DataTypes.BOOLEAN,
-}, {
-    sequelize, //specifies what database our model is stored in
-    timestamps: false
-})
-
-module.exports = {Musician}
+//export models with added associations
+module.exports = {Musician, Band, sequelize}
