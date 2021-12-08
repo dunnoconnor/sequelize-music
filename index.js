@@ -1,7 +1,7 @@
 const {sequelize, DataTypes, Model} = require('./db')
 //import models
-const { Musician } = require('./Musician')
-const { Band } = require('./Band')
+const { Musician } = require('./models/Musician')
+const { Band } = require('./models/Band')
 
 //associate models
 //adds foreign key to musician table connecting a musician instance to a specific band

@@ -64,5 +64,10 @@ describe('Muscian Database', () => {
 
     })
 
+    afterAll(async()=> {
+        // await sequelize.sync({force:true})
+        sequelize.close()
+    })
+
 })
 

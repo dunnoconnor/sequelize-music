@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/dunnoconnor/sequelize-music#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "jest": "^27.4.3",
     "sequelize": "^6.12.0-alpha.1",
     "sqlite3": "^5.0.2"
